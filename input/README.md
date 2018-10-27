@@ -1,0 +1,1 @@
+Input files are placed here. The program loads every single file in this directory, except the pre-existing **README.md** file. Do not place any files here that are not correctly formatted files, with fields separated by semicolons.
