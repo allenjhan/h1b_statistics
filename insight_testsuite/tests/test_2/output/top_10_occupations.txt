@@ -1,0 +1,4 @@
+TOP_OCCUPATIONS;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE
+Accountants and Auditors;6;66.7%
+Computer Programmers;2;22.2%
+Software Developers, Applications;1;11.1%

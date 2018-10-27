@@ -1,0 +1,5 @@
+TOP_OCCUPATIONS;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE
+Computer Occupations, All Other;1;33.3%
+Management Analysts;1;33.3%
+Market Research Analysts and Marketing Specialists;1;33.3%
+

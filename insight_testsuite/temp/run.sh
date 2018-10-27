@@ -4,6 +4,5 @@
 #
 #python ./src/h1b_counting.py ./input/h1b_input.csv ./output/top_10_occupations.txt ./output/top_10_states.txt
 
-#scala ~/Linux/dcj/1.dcj-working-directory/2018.10.23.insight-cc/h1b_statistics/src/h1b_statistics.scala $(pwd)
-scala ~/Linux/dcj/1.dcj-working-directory/2018.10.23.insight-cc/h1b_statistics/src/h1b_statistics.scala .
+scala ./src/h1b_statistics.scala .
 
