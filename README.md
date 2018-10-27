@@ -4,7 +4,7 @@
 3. [Run](README.md#run)
 
 # Problem
-The problem is to do some data processing on some text files containing H-1B visa data, from the US Department of Labor's Office of Foreign Labor Certification Performance Data. Some files are provided in the input directory that have been pre-processed from Excel format into semicolon delmited fields. The goal is to calculate the statistics for all the files contained in this directory. So if the input directory contains three files with visa data, then statistics are calculated on the combined data from all three files.
+The problem is to do some data processing on some text files containing H-1B visa data, from the US Department of Labor's Office of Foreign Labor Certification Performance Data. Some files are provided in the input directory that have been pre-processed from Excel format into semicolon delimited fields. The goal is to calculate the statistics for all the files contained in this directory. So if the input directory contains three files with visa data, then statistics are calculated on the combined data from all three files.
 
 # Approach
 The approach chosen in this submission is to use Scala, because of its concise, functionally-driven Collections syntax. The presence of the groupBy function saves us the trouble of having to implement it ourselves from scratch. Scala also provides parallel collections for better performance for operations that are parallelizable. The present submission tries to leverage Scala's parallel collections by using the immutable ParVector, for faster performance. Care has been taken to use the parallelizable reduce function, by making sure the operations called by it are associative.
