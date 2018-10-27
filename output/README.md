@@ -1,0 +1,1 @@
+Two output files are generated, one containing the top ten occupations, as given by the name corresponding to its respective SOC code, and one containing the top ten states. These two files contain the combined statistics for all the files in the input directory.
