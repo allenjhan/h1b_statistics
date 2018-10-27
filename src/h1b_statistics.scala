@@ -67,7 +67,7 @@ object h1b_statistics {
       val indices: (Vector[Int], Vector[Int], Vector[Int]) = processHeader(getFirstLine)
 
       while (!inputStream.isEmpty && !indices._1.isEmpty) {
-        val data = getSomeLines.map(replaceSemicolon(_)).map(_.split("""\^"""))
+        val data = getSomeLines.map(replaceSemicolon(_)).map(_.split("""\^\^"""))
 
         val filteredData = data.filter(_ (indices._1.head) == "CERTIFIED")
 
@@ -84,8 +84,8 @@ object h1b_statistics {
 
   /** Because the input files have semicolons that appear within individual fields, naively splitting each line
     * by semicolon does not work. Instead, take all semicolons that don't appear in double quotes and replace them
-    * with ^. That is what this function does: it replaces all semicolons that don't appear in quotes and replaces
-    * them with ^ so that splitting the line on ^ works.
+    * with double ^. That is what this function does: it replaces all semicolons that don't appear in quotes and
+    * replaces them with double ^ so that splitting the line on double ^ works.
     *
     * Quotations appear in the input text as enclosed by one pair of double quotation marks, by one pair of two
     * double quotation marks to indicate quotation marks that appear within a field, or by one pair of three double
@@ -104,7 +104,7 @@ object h1b_statistics {
     var isInQuotes = false
     for(ch<-str){
       if (ch=='"') isInQuotes = !isInQuotes
-      else if(ch==';' && !isInQuotes) builder.append('^')
+      else if(ch==';' && !isInQuotes) builder.append("^^")
       else builder.append(ch)
     }
     builder.toString
@@ -149,7 +149,7 @@ object h1b_statistics {
     (certifiedIdx, occupationIdx, stateIdx)
   }
 
-  /** This function takes the raw data that has been split on ^ and outputs the occupation statistics and state
+  /** This function takes the raw data that has been split on double ^ and outputs the occupation statistics and state
     * statistics.
     *
     * @param in The first field is the raw data. Each split line is given as an array. The second field is the sequence
